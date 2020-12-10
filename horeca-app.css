@@ -1,0 +1,16 @@
+body{
+	display: grid;
+}
+.container{
+	border:solid black 15px;
+	line-height:100px;
+	width:600px;
+	color:lime;
+}
+
+
+#java{
+	float: left;
+	grid-row:1;
+	grid-column:1;
+}
