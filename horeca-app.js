@@ -38,9 +38,11 @@ function bestel(){
 			case 'snack':
 				var bitterballen=prompt('hoeveel bitterballenwilt u bestellen?(keuze uit 8 en 16)')
 				if(bitterballen == 8){
-					aantalbitterbal=aantalbitterbal+8
+					var b8 = prompt('hoeveel bakjes van 8 bitterballen wilt u?')
+					for(var k =1; k <= b8 ; k++){aantalbitterbal=aantalbitterbal+8}
 				}else if(bitterballen == 16){
-					aantalbitterbal=aantalbitterbal+16
+					var b16 = prompt('hoeveel bakjes van 16 bitterballen wilt u?')
+					for(var k =1; k <= b16 ; k++){aantalbitterbal=aantalbitterbal+16}
 				}else{
 					alert('U kunt alleen een keuze maken tussen 8 en 16. De snacks zijn niet toegevoegd aan de bestelling.')
 				}
