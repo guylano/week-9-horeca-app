@@ -12,7 +12,7 @@ bestel()
 function bestel(){
 		while(bestelling != 'stop'){
 		var bestelling=prompt('Welke bestelling wilt u toevoegen? [fris, bier, wijn, snack]')
-
+		bestelling = bestelling.toLowerCase();
 		switch(bestelling){
 			case 'fris':
 				var fris=prompt('hoeveel fris wil je?')
@@ -27,13 +27,7 @@ function bestel(){
 				aantalwijn=parseInt(aantalwijn) + parseInt(wijn)
 			break;
 			case 'stop':
-				document.write('u heeft '+aantalfris+' fris besteld '+aantalfris*2+" euro<br>")
-				document.write('u heeft '+aantalbier+' bier besteld '+aantalbier*3+" euro<br>")
-				document.write('u heeft '+aantalwijn+' wijn besteld '+aantalwijn*3+" euro<br>")
-				document.write('u heeft '+aantalbitterbal+' bitterballen besteld '+aantalbitterbal*1+" euro<br>")
-				document.write('totaal:'+parseInt(aantalfris*2+aantalbier*3+aantalwijn*3+aantalbitterbal*1)+" euro")
-				var prijzen=document.write()
-				prijzenhtml.innerHTML=prijzen
+				kassaBon()
 			break;
 			case 'snack':
 				var bitterballen=prompt('hoeveel bitterballenwilt u bestellen?(keuze uit 8 en 16)')
@@ -54,3 +48,21 @@ function bestel(){
 }
 
 	
+
+function kassaBon(){
+	if(aantalfris > 0){
+					document.write('u heeft '+aantalfris+' fris besteld '+aantalfris*2+" euro<br>")
+				}
+				if(aantalbier > 0){
+					document.write('u heeft '+aantalbier+' bier besteld '+aantalbier*3+" euro<br>")
+				}
+				if(aantalwijn > 0){
+					document.write('u heeft '+aantalwijn+' wijn besteld '+aantalwijn*3+" euro<br>")
+				}
+				if(aantalbitterbal > 0){
+					document.write('u heeft '+aantalbitterbal+' bitterballen besteld '+aantalbitterbal*1+" euro<br>")
+				}
+				document.write('totaal:'+parseInt(aantalfris*2+aantalbier*3+aantalwijn*3+aantalbitterbal*1)+" euro")
+				var prijzen=document.write()
+				prijzenhtml.innerHTML=prijzen
+}
